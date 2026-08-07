@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="logo1.png" type="image/x-icon">
+    <style>
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ccc;
+    margin: 0
+}
+
+.aside__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background-color: #222e;
+    padding: 0 1rem;
+    position: sticky;
+    top: 0;
+}
+
+.header__logo {
+    width: 3rem;
+    height: 3rem;
+}
+
+.header__nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav__link {
+    color: #E0B04A;
+    text-decoration: none;
+}
+
+header {
+    margin: .5rem 4rem;
+    padding: .5rem 0
+}
+
+header p {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: bolder;
+    margin: 0
+}
+
+h1 {
+    text-align: center;
+    text-wrap: pretty;
+    font-size: 1.6rem;
+    margin: 0
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(2,45%);
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: center;
+}
+
+main img {
+    width: 100%;
+    border-radius: 20px;
+}
+.aside__contacto {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 1rem;
+}
+
+.aside__contacto h3 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.aside__contacto a {
+    text-decoration: underline; 
+    color: #222;
+    font-weight: bold;
+    border: 5px groove #000;
+    padding: .4rem 3rem;
+    background-color: #E0B04Aee;
+    border-radius: 5px;
+}
+
+footer {
+    display: flex; 
+    flex-direction: column;
+    background-color: #333333;
+    color: #E0B04A99;
+    text-align: center;
+    padding: 1rem
+}
+
+footer p {
+    margin: .5rem 0rem;
+}
+
+@media screen and (min-width: 640px) and (max-width: 1024px) {
+    body {
+        background-color: #fff;
+    }
+
+    .header__logo {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .nav__link {
+        font-size: 1.3rem;
+    }
+
+    main {
+        width: 50%;
+        margin: 0 auto;
+        background-color: #ccc;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    body {
+        background-color: #fff;
+    }
+
+    .aside__nav {
+        z-index: 10;
+    }
+
+    .nav__link {
+        transition-property: transform, opacity;
+        transition-duration: 0.3s;
+    }
+
+    .nav__link:hover {
+        transform: scale(1.1);
+        opacity: 0.6;
+    }
+
+    main {
+        width: 50%;
+        margin: 0 auto;
+        background-color: #ccc;
+        grid-template-columns: repeat(3,31%);
+        border-radius: 20px;
+        z-index: 1;
+        transition-property: transform, opacity, box-shadow;
+        transition-duration: 0.8s;
+    }
+
+    .imagenes {
+        transition-property: transform, opacity;
+        transition-duration: 0.3s;
+    }
+
+    .imagenes:hover {
+        transform: scale(1.05);
+        opacity: 0.6;
+        box-shadow: 0px 0px 10px #E0B04A;
+    }
+
+    .aside__contacto a {
+        transition-property: transform, color, background-color, box-shadow;
+        transition-duration: .5s;
+    }
+
+    .aside__contacto a:hover {
+        transform: scale(1.03) translateY(-10px);
+        color: #000;
+        background-color: #E0B04A99;
+        box-shadow: 5px 5px 10px 0 #000;
+    } 
+}
+    </style>
+</head>
+<body>
+    <aside class="aside__nav">
+            <img src="logo.png" alt="Logo" class="header__logo">
+        <nav class="header__nav">
+            <a href="https://ricardorz-11.github.io/Bienvenida-RRZ/" target="_blank" class="nav__link">
+                Inicio
+            </a>
+            <a href="#contacto" class="nav__link">
+                Contacto
+            </a>
+        </nav>
+    </aside>
+    <div class="header__wrapper">
+    <header>
+        <p>Percheros</p>
+        <h1 translate="no" lang="en">RRZ METALWORKS</h1>
+    </header>
+    </div>
+    <main>
+        <img src="caracol.png" alt="Perchero de 5 ganchos" class="imagenes">
+        <img src="pez.jpeg" alt="Perchero de 5 ganchos" class="imagenes">
+        <img src="casa.png" alt="Perchero de 5 ganchos" class="imagenes">
+        <img src="caracol.png" alt="Perchero de 5 ganchos" class="imagenes">
+        <img src="pez.jpeg" alt="Perchero de 5 ganchos" class="imagenes">
+        <img src="casa.png" alt="Perchero de 5 ganchos" class="imagenes">
+        <img src="caracol.png" alt="Perchero de 5 ganchos" class="imagenes">
+        <img src="pez.jpeg" alt="Perchero de 5 ganchos" class="imagenes">
+        <img src="casa.png" alt="Perchero de 5 ganchos" class="imagenes">
+        <img src="caracol.png" alt="Perchero de 5 ganchos" class="imagenes">
+        <img src="pez.jpeg" alt="Perchero de 5 ganchos" class="imagenes">
+        <img src="casa.png" alt="Perchero de 5 ganchos" class="imagenes">
+    </main>
+        <aside class="aside__contacto" id="contacto">
+            <h3>
+                Contáctanos para hacer tu pedido al...
+            </h3>
+            <a href="https://wa.me/522461313240?text=Hola,%20quiero%20consultar%20un%20producto" target="_blank" rel="noopener noreferrer"> ---&gt; +52 246 131 3240 &lt;---</a> 
+        </aside>
+    </div>
+    <footer>
+        <p>
+            © 2026 RRZ METALWORKS. Todos los derechos reservados.
+        </p>
+        <p>
+            📍 Tlaxcala, México
+        </p>
+        <p>
+            WhatsApp: +522461313240
+        </p>
+    </footer>
+    
+    <div id="ventanaFlotante" style="display: none; position: fixed; z-index: 1000; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.85); justify-content: center; align-items: center; cursor: zoom-out;" onclick="cerrarImagen()">
+        <span style="position: absolute; top: 20px; right: 30px; color: #fff; font-size: 40px; font-weight: bold; cursor: pointer;">&times;</span>
+        <img id="imgAmpliada" style="max-width: 85%; max-height: 85%; border-radius: 10px; box-shadow: 0 0 25px rgba(0,0,0,0.5);">
+    </div>
+
+    <script>
+        // 1. Seleccionamos todas las imágenes que tengan la clase 'imagenes'
+        const imagenesGaleria = document.querySelectorAll('.imagenes');
+        const ventana = document.getElementById('ventanaFlotante');
+        const imgGrande = document.getElementById('imgAmpliada');
+
+        // 2. Le añadimos el evento de "click" de forma automática a cada foto
+        imagenesGaleria.forEach(imagen => {
+            imagen.style.cursor = 'pointer'; // Asegura que muestre la manita de click
+            
+            imagen.addEventListener('click', () => {
+                ventana.style.display = 'flex'; // Muestra el fondo oscuro
+                imgGrande.src = imagen.src;     // Pone la foto que tocaste en grande
+            });
+        });
+
+        // 3. Función para cerrar la ventana cuando toques cualquier parte del fondo negro
+        function cerrarImagen() {
+            ventana.style.display = 'none'; // Esconde el contenedor de nuevo
+        }
+    </script>
+</body>
+</html>
